@@ -1,3 +1,51 @@
+# Nano Challenge X (Daiquiri) - Backend Path - Machine Learning (ML) Path
+
+
+# Objective
+Train a model that can accurately detect specific types of body movements (actions). The types of body actions to be trained include:
+
+* Reach
+* Squats
+* Random Actions
+
+
+# Process
+The process to train a model involved the following steps:
+
+
+## Data Creation (videos)
+* Using an iphone, record a video that fully captures the motion of each body action
+* Each video should only record the action of the intended body movement
+* Record multiple videos of the same action (approx. 50 videos per action) 
+
+
+
+
+# Model Training
+* Once enough videos (data) of all actions have been created, split the videos into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder.
+
+
+# Model Verfication
+
+
+
+## Create ML Verficaiton
+
+
+
+## iOS App Verification (Guess My Exercise sample app)
+
+
+
+
+
+
+
+
+
+The following information is provided by Apple and is provided as supplemntary information and describes how the sample app detects actions.
+Source: https://developer.apple.com/documentation/createml/detecting_human_actions_in_a_live_video_feed
+
 # Detecting Human Actions in a Live Video Feed
 
 Identify body movements by sending a person's pose data from a series
