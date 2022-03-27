@@ -1,28 +1,35 @@
-# Nano Challenge X (Daiquiri) - Backend Path - Machine Learning (ML) Path
+# Nano Challenge X (Daiquiri) - Machine Learning
 
 
 # Objective
-Train a model that can accurately detect specific types of body movements (actions). The types of body actions to be trained include:
+The objective of this project is to use Apple provided machine learning tools such as CreateML, to train a simple model that can accurately detect specific, simple body movements (actions). The types of body actions that will be trained are:
 
 * Reach
 * Squats
-* Random Actions
+* Random (random body movements)
 
 
 # Process
-The process to train a model involved the following steps:
+The high level steps and process to train a model are as follows:
 
 
 ## Data Creation (videos)
-* Using an iphone, record a video that fully captures the motion of each body action
+* Using an iphone, record a series of videos to capture the motion of each body action
 * Each video should only record the action of the intended body movement
-* Record multiple videos of the same action (approx. 50 videos per action) 
+* Record multiple videos of each action (approx. 50 videos per action) so that enough data is available to effectively train the model.
+* The following image shows the video recording of the sqaut action
+
+![Video recording of Squat Body Action](/Documentation/detecting-human-squat-action.png)
 
 
+# Model Training with Create ML Mac App
+* After recording enough data (videso) of each body action, split the data of each action into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder. For example, if you record 50 videos of a specific body action, place 40 vidoes into the training folder and the reminaing 10 into the testing folder.
+* The training folder is used by Create ML to train the model, while the test folder is used by Create ML to verify the trained data
+* The following image shows Create ML training the model in real time. The graph indictaes the iterations performed and the level of confidence over time, as the data is analyzed to train the model  
+
+![Create ML Model Training Graph](/Documentation/cml-action-classifier.png)
 
 
-# Model Training
-* Once enough videos (data) of all actions have been created, split the videos into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder.
 
 
 # Model Verfication
