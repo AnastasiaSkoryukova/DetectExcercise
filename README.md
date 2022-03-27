@@ -16,50 +16,38 @@ The high level steps and process to train a model are as follows:
 ## Data Creation (videos)
 * Using an iphone, record a series of videos to capture the motion of each body action
 * Each video should only record the action of the intended body movement
-* Record multiple videos of each action (approx. 50 videos per action) so that enough data is available to effectively train the model.
-* The following image shows the video recording of the sqaut action
+* Record multiple videos of each action (approx. 50 videos per action) so that enough data is available to effectively train the model
+* The following image shows the video recording of the sqaut body action
 
 ![Video recording of Squat Body Action](/Documentation/detecting-human-squat-action.png)
 
 
-# Model Training with Create ML Mac App
-* After recording enough data (videos) of each body action, split the data of each action into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder. For example, if you record 50 videos of a specific body action, place 40 vidoes into the training folder and the reminaing 10 into the testing folder.
+## Model Training with Create ML Mac App
+* After recording enough data (videos) of each body action, split the data of each action into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder. For example, if you record 50 videos of a specific body action, place 40 vidoes into the training folder and the reminaing 10 into the testing folder
 * The training folder is used by Create ML to train the model, while the test folder is used by Create ML to verify the trained data
 * The following image shows Create ML training the model in real time. The graph indictaes the iterations performed and the level of confidence over time, as the data is analyzed to train the model  
 
 ![Create ML Model Training Graph](/Documentation/cml-action-classifier.png)
 
+
+## Trained Model Output
 * After some time, depending on the settings used to train the model (such as iterations, video frame rate etc), the model will be ready
-* The following is a summary of the meta data produced once the model is ready
+* The following is a summary of the meta data produced
 
-
-# Trained Model Output
 ![Create ML Trained Model](/Documentation/cml-model.png)
 
 
+## Create ML Model Verification
+* To ensure the model correctly detects the trained body actions, record a video of a random person performing the action
+* Then import the video into the Preview Pain of Create ML and run, as shown in the following video
+
+https://user-images.githubusercontent.com/44283704/160300134-27cd70dd-be01-45ff-bfbf-6c084ce746d1.mov
 
 
-# Model Verfication
-![Create ML Trained Model](/Documentation/cml-model-verification.png)
+# Vision Framework and iOS Sample App
+The following documentation is provided by Apple and is included for supplemental information purposes to describe how the [Vision framework](https://developer.apple.com/documentation/vision) and the sample iOS app detects body actions. (Source: [Apple - Detecting Human Actions in a Live Video Feed](https://developer.apple.com/documentation/createml/detecting_human_actions_in_a_live_video_feed))
 
-## Create ML Verfication
-
-
-
-## iOS App Verification (Guess My Exercise sample app)
-
-
-
-
-
-
-
-
-
-The following information is provided by Apple and is provided as supplemntary information and describes how the sample app detects actions.
-Source: https://developer.apple.com/documentation/createml/detecting_human_actions_in_a_live_video_feed
-
-# Detecting Human Actions in a Live Video Feed
+## Detecting Human Actions in a Live Video Feed
 
 Identify body movements by sending a person's pose data from a series
 of video frames to an action-classification model.
