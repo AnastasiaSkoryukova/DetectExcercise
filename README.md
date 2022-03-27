@@ -23,20 +23,26 @@ The high level steps and process to train a model are as follows:
 
 
 # Model Training with Create ML Mac App
-* After recording enough data (videso) of each body action, split the data of each action into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder. For example, if you record 50 videos of a specific body action, place 40 vidoes into the training folder and the reminaing 10 into the testing folder.
+* After recording enough data (videos) of each body action, split the data of each action into training and test folders, allocating around 20% of the videos to the test folder and the reminaing 80% to the validation folder. For example, if you record 50 videos of a specific body action, place 40 vidoes into the training folder and the reminaing 10 into the testing folder.
 * The training folder is used by Create ML to train the model, while the test folder is used by Create ML to verify the trained data
 * The following image shows Create ML training the model in real time. The graph indictaes the iterations performed and the level of confidence over time, as the data is analyzed to train the model  
 
 ![Create ML Model Training Graph](/Documentation/cml-action-classifier.png)
 
+* After some time, depending on the settings used to train the model (such as iterations, video frame rate etc), the model will be ready
+* The following is a summary of the meta data produced once the model is ready
+
+
+# Trained Model Output
+![Create ML Trained Model](/Documentation/cml-model.png)
+
 
 
 
 # Model Verfication
+![Create ML Trained Model](/Documentation/cml-model-verification.png)
 
-
-
-## Create ML Verficaiton
+## Create ML Verfication
 
 
 
