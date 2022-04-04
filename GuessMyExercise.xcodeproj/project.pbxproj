@@ -29,7 +29,8 @@
 		DFE2078525AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2078425AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
 		DFF8422E25CC7E9000DC36E5 /* ExerciseClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF49B65225CB5E27008A61F3 /* ExerciseClassifier+Singleton.swift */; };
 		EE8560D927EB605E0017B134 /* ExerciseClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EE8560D827EB605E0017B134 /* ExerciseClassifier.mlmodel */; };
-		EE87534827ECFB3200B7A7D7 /* success.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EE87534727ECFB3200B7A7D7 /* success.mp3 */; };
+		EEAE402627F0902C00578654 /* squat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EEAE402527F0902C00578654 /* squat.mp3 */; };
+		EEAE402827F0903100578654 /* reach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EEAE402727F0903100578654 /* reach.mp3 */; };
 		FADD45BD24D55CE200955140 /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD45BC24D55CE200955140 /* AVCaptureDevice+FrameRate.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,8 @@
 		DFD1ED012564427700466FDA /* VideoProcessingChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoProcessingChain.swift; sourceTree = "<group>"; };
 		DFE2078425AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureVideoDataOutput+PixelFormat.swift"; sourceTree = "<group>"; };
 		EE8560D827EB605E0017B134 /* ExerciseClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ExerciseClassifier.mlmodel; sourceTree = "<group>"; };
-		EE87534727ECFB3200B7A7D7 /* success.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = success.mp3; sourceTree = "<group>"; };
+		EEAE402527F0902C00578654 /* squat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = squat.mp3; sourceTree = "<group>"; };
+		EEAE402727F0903100578654 /* reach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reach.mp3; sourceTree = "<group>"; };
 		FADD45BC24D55CE200955140 /* AVCaptureDevice+FrameRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+FrameRate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,7 +142,8 @@
 			children = (
 				4A2D23BF22BB70E500494C55 /* Info.plist */,
 				4A2D23BA22BB70E500494C55 /* Assets.xcassets */,
-				EE87534727ECFB3200B7A7D7 /* success.mp3 */,
+				EEAE402527F0902C00578654 /* squat.mp3 */,
+				EEAE402727F0903100578654 /* reach.mp3 */,
 				4A2D23B122BB70E400494C55 /* AppDelegate.swift */,
 				4A2D23BC22BB70E500494C55 /* LaunchScreen.storyboard */,
 				12E34EC925104636003C138C /* GuessMyExercise.entitlements */,
@@ -271,8 +274,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE87534827ECFB3200B7A7D7 /* success.mp3 in Resources */,
+				EEAE402827F0903100578654 /* reach.mp3 in Resources */,
 				4A2D23BE22BB70E500494C55 /* LaunchScreen.storyboard in Resources */,
+				EEAE402627F0902C00578654 /* squat.mp3 in Resources */,
 				4A2D23BB22BB70E500494C55 /* Assets.xcassets in Resources */,
 				4A2D23B922BB70E400494C55 /* Main.storyboard in Resources */,
 			);

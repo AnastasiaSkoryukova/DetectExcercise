@@ -49,6 +49,8 @@ class MainViewController: UIViewController {
     var actionFrameCounts = [String: Int]()
     
     var player: AVAudioPlayer!
+    
+    var lastAction = ""
 }
 
 // MARK: - View Controller Events
@@ -221,27 +223,43 @@ extension MainViewController {
         DispatchQueue.main.async { self.confidenceLabel.text = confidenceString }
         
         //        Play the sound if the action is 100% recognized
-        if let prediction = prediction.confidence {
-            print(prediction)
-        }
         
-        if let confidenceLevel = prediction.confidence  {
-            if confidenceLevel > 0.95 {
-            DispatchQueue.main.async { self.playTheSound() }
+        
+        if let rawConfidenceLevel = prediction.confidence  {
+            let confidenceLevel = rawConfidenceLevel * 100
+            print(confidenceLevel)
+            
+            if confidenceLevel > 99.5 {
+                switch prediction.label {
+                case "reach":
+                    if self.lastAction == "reach" { break } else {
+                        DispatchQueue.main.async { self.playTheSound(from: "reach") }
+                        self.lastAction = "reach"
+                        print("🔵the last saved action is \(self.lastAction)")
+                    }
+                case "squats":
+                    if self.lastAction == "squat" { break } else {
+                    DispatchQueue.main.async { self.playTheSound(from: "squat") }
+                        self.lastAction = "squat"
+                        print("🔵the last saved action is \(self.lastAction)")
+                    }
+                default:
+                    break
+                }
             }
         }
     }
     
     
-    private func playTheSound() {
-        if let url = Bundle.main.url(forResource: "success", withExtension: "mp3") {
+    private func playTheSound(from audioFile: String) {
+        if let url = Bundle.main.url(forResource: audioFile, withExtension: "mp3") {
             do {
                 try player = AVAudioPlayer(contentsOf: url)
                 player.volume = 5
                 player.play()
-                print("playing music file")
+                print("🟢playing music file \(audioFile)")
             } catch {
-                print("Couldn't play audio. Error: \(error)")
+                print("🔴Couldn't play audio. Error: \(error)")
             }
         } else {
             print("No audio file found")
