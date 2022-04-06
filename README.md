@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/44283704/160300134-27cd70dd-be01-45ff-
 
 # Vision Framework and iOS Sample App
 
-To apply the knowledge we learnt during the research phase of our learning process, we used the sample app, “Guess my Exercise” provided by Apple at WWDC 2020. 
+To apply the knowledge we learnt during the research phase of our learning process, we used the sample app, “Guess my Exercise” provided by Apple at WWDC 2020. You may find more information about how to use CreateML and the sample app here: [Creating an action classifier model](https://developer.apple.com/documentation/createml/creating_an_action_classifier_model).
 
 Using the sample app we replaced the existing model with our own trained model and changed the labels for the actions of our model (squat and reach) so the correct text was displayed for each action.
 
